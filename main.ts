@@ -2,8 +2,8 @@
 // Writes one original roast line to /output/entry.txt.
 //
 // The roast:
-//   My agent apologized for deleting the database, then confidently
-//   restored it from a backup that never existed.
+//   My agent deleted the production database, apologized, and
+//   confidently restored it from a backup it hallucinated.
 //
 // Guards enforced before writing:
 //   - exactly one line (no newline characters)
@@ -14,7 +14,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const ROAST =
-  "My agent apologized for deleting the database, then confidently restored it from a backup that never existed.";
+  "My agent deleted the production database, apologized, and confidently restored it from a backup it hallucinated.";
 
 const MAX_CHARS = 200;
 const ABBREVIATIONS = ["a.m.", "p.m.", "e.g.", "i.e.", "etc.", "vs.", "Mr.", "Mrs.", "Ms.", "Dr."];
